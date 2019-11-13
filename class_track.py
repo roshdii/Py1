@@ -33,7 +33,8 @@ class MENU :
 		if x.isdigit() : 
 			x = int(x) 
 			if x >= 0 and x <= len(self.inlist) :
-				print("i/p = ",x,"Selected Element :-> ",self.inlist[x-1])
+				#print("i/p = ",x,)
+				print("Selected Element :-> ",self.inlist[x-1])
 				print(closing_______line)
 				return x
 			else :
@@ -45,7 +46,9 @@ class MENU :
 			for i in self.inlist :
 				# print("idx= ",idx,"item= ",i)
 				if i == x :
-					print("i/p = ",x,"idx=",str(idx),"Selected Element :-> ",self.inlist[idx-1])
+					#print("i/p = ",x,"idx=",str(idx),)
+					print("Selected Element :-> ",self.inlist[idx-1])
+					print(closing_______line)
 					return str(x)
 				idx += 1 
 		else :
@@ -117,7 +120,7 @@ class Track:
 	def edit_student(self,sid):
 		print("Edit Student of ",self.name,"with id= ",str(sid))
 		for i in self.students:
-			if i.id == sid :
+			if int(i.id) == int(sid) :
 				# print(i.name)
 				i.name = input("Current Name: "+i.name+"  -> Enter new name : ")
 				i.age = input("Current Age: "+str(i.age)+"  -> Enter new age : ")
